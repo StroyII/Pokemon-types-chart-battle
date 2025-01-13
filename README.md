@@ -37,7 +37,7 @@
 
 1. **Clone the GitHub Repository to one of your folder :**
 ```bash
-git clone https://github.com/StroyII/Pokemon-types-game.git
+git clone git@github.com:StroyII/Pokemon-types-game.git
 ```
 
 2. **Open VScode in the exact folder**
