@@ -4,7 +4,7 @@
   <img src="images/logo.png" alt="Pokemon types chart game" >
 </p>
 <p align="center">Created by StroyII</p>
-<p align="center">Collaborators : Yougo-rgb, Emmaiy</p>
+<p align="center">Collaborators : @Yougo-rgb, @Emmaiy</p>
 
 
 ## 📖 Overview
