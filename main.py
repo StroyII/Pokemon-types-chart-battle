@@ -79,7 +79,9 @@ def main():
                 joueur1 = Joueur(nom_joueur_1)
                 nom_joueur_2 = input("Player2 : Choose a username")
                 joueur2 = Joueur(nom_joueur_2)
-                
+                is_multi_game_on = True
+                while(is_multi_game_on):
+                    choix_joueur1 = input("")
 
 
 
