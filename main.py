@@ -75,14 +75,16 @@ def main():
                 joueur_solo = Joueur(nom_joueur_solo)
             elif(choix_mode == "2"):
                 is_choix_mode_ok = False
-                nom_joueur_1 = input("Player1 : Choose a username")
+                nom_joueur_1 = input("Player1 : Choose a username : ")
                 joueur1 = Joueur(nom_joueur_1)
-                nom_joueur_2 = input("Player2 : Choose a username")
+                nom_joueur_2 = input("Player2 : Choose a username : ")
                 joueur2 = Joueur(nom_joueur_2)
                 is_multi_game_on = True
+                print(f"Joueur 1 = {joueur1.nom}\nJoueur 2 = {joueur2.nom}")
+                input("")
                 while(is_multi_game_on):
                     choix_joueur1 = input("")
-
+                    
 
 
 main()
