@@ -4,87 +4,98 @@ import time
 from type import *
 from joueur import *
 
-# Adding the types in list
-types = []
+class main():
+    def __init__(self):
+        self.types = []
 
-normal = Type("Normal",["Fighting"])
-types.append(normal)
+        self.definir_types()
+        self.main()
 
-fire = Type("Fire", ["Water","Ground","Rock"])
-types.append(fire)
+    def definir_types(self):
+        # Adding the types in list
+        types = []
 
-water = Type("Water",["Grass","Electric"])
-types.append(water)
+        normal = Type("Normal",["Fighting"])
+        types.append(normal)
 
-grass = Type("Grass",["Fire","Ice","Poison","Flying","Bug"])
-types.append(grass)
+        fire = Type("Fire", ["Water","Ground","Rock"])
+        types.append(fire)
 
-electric = Type("Electric",["Ground"])
-types.append(electric)
+        water = Type("Water",["Grass","Electric"])
+        types.append(water)
 
-ice = Type("Ice",["Fire","Fighting","Rock","Steel"])
-types.append(ice)
+        grass = Type("Grass",["Fire","Ice","Poison","Flying","Bug"])
+        types.append(grass)
 
-fighting = Type("Fighting",["Flying","Psychic","Fairy"])
-types.append(fighting)
+        electric = Type("Electric",["Ground"])
+        types.append(electric)
 
-poison = Type("Poison",["Ground","Psychic"])
-types.append(poison)
+        ice = Type("Ice",["Fire","Fighting","Rock","Steel"])
+        types.append(ice)
 
-ground = Type("Ground",["Water","Grass","Ice"])
-types.append(ground)
+        fighting = Type("Fighting",["Flying","Psychic","Fairy"])
+        types.append(fighting)
 
-flying = Type("Flying",["Electric","Ice","Rock"])
-types.append(flying)
+        poison = Type("Poison",["Ground","Psychic"])
+        types.append(poison)
 
-psychic = Type("Psychic",["Bug","Ghost","Dark"])
-types.append(psychic)
+        ground = Type("Ground",["Water","Grass","Ice"])
+        types.append(ground)
 
-bug = Type("Bug",["Fire","Flying","Rock"])
-types.append(bug)
+        flying = Type("Flying",["Electric","Ice","Rock"])
+        types.append(flying)
 
-rock = Type("Rock",["Water","Grass","Fighting","Ground","Steel"])
-types.append(rock)
+        psychic = Type("Psychic",["Bug","Ghost","Dark"])
+        types.append(psychic)
 
-ghost = Type("Ghost",["Ghost","Dark"])
-types.append(ghost)
+        bug = Type("Bug",["Fire","Flying","Rock"])
+        types.append(bug)
 
-dragon = Type("Dragon",["Ice","Dragon","Fairy"])
-types.append(dragon)
+        rock = Type("Rock",["Water","Grass","Fighting","Ground","Steel"])
+        types.append(rock)
 
-dark = Type("Dark",["Fighting","Bug","Fairy"])
-types.append(dark)
+        ghost = Type("Ghost",["Ghost","Dark"])
+        types.append(ghost)
 
-steel = Type("Steel",["Fire","Fighting","Ground"])
-types.append(steel)
+        dragon = Type("Dragon",["Ice","Dragon","Fairy"])
+        types.append(dragon)
 
-fairy = Type("Fairy",["Poison","Steel"])
-types.append(fairy)
+        dark = Type("Dark",["Fighting","Bug","Fairy"])
+        types.append(dark)
 
+        steel = Type("Steel",["Fire","Fighting","Ground"])
+        types.append(steel)
 
-def main():
-    #Start of loop
-    is_game_on = True
-    is_choix_mode_ok = True
-    while(is_game_on):
-        while(is_choix_mode_ok):
-            choix_mode = input("Which gamemode ? (1:solo, 2:multiplayer)")
-            if(choix_mode == "1"):
-                is_choix_mode_ok = False
-                nom_joueur_solo = input("Choose a username : ")
-                joueur_solo = Joueur(nom_joueur_solo)
-            elif(choix_mode == "2"):
-                is_choix_mode_ok = False
-                nom_joueur_1 = input("Player1 : Choose a username : ")
-                joueur1 = Joueur(nom_joueur_1)
-                nom_joueur_2 = input("Player2 : Choose a username : ")
-                joueur2 = Joueur(nom_joueur_2)
-                is_multi_game_on = True
-                print(f"Joueur 1 = {joueur1.nom}\nJoueur 2 = {joueur2.nom}")
-                input("")
-                while(is_multi_game_on):
-                    choix_joueur1 = input("")
-                    
+        fairy = Type("Fairy",["Poison","Steel"])
+        types.append(fairy)
+
+        # Adding in the class attribute
+        self.types = type
 
 
-main()
+    def main():
+        #Start of loop
+        is_game_on = True
+        is_choix_mode_ok = True
+        while(is_game_on):
+            while(is_choix_mode_ok):
+                choix_mode = input("Which gamemode ? (1:solo, 2:multiplayer)")
+                if(choix_mode == "1"):
+                    is_choix_mode_ok = False
+                    nom_joueur_solo = input("Choose a username : ")
+                    joueur_solo = Joueur(nom_joueur_solo)
+                elif(choix_mode == "2"):
+                    is_choix_mode_ok = False
+                    nom_joueur_1 = input("Player1 : Choose a username : ")
+                    joueur1 = Joueur(nom_joueur_1)
+                    nom_joueur_2 = input("Player2 : Choose a username : ")
+                    joueur2 = Joueur(nom_joueur_2)
+                    is_multi_game_on = True
+                    print(f"Joueur 1 = {joueur1.nom}\nJoueur 2 = {joueur2.nom}")
+                    input("")
+                    while(is_multi_game_on):
+                        choix_joueur1 = input("")
+                        
+
+
+game = main()
