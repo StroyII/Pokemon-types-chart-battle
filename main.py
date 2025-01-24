@@ -9,7 +9,7 @@ class main():
         self.types = []
 
         self.definir_types()
-        self.main()
+        self.main_game()
 
     def definir_types(self):
         # Adding the types in list
@@ -73,17 +73,21 @@ class main():
         self.types = type
 
 
-    def main():
+    def main_game(self):
         #Start of loop
         is_game_on = True
         is_choix_mode_ok = True
         while(is_game_on):
             while(is_choix_mode_ok):
-                choix_mode = input("Which gamemode ? (1:solo, 2:multiplayer)")
+                choix_mode = input("Which gamemode ? (1:solo, 2:multiplayer) : ")
+
                 if(choix_mode == "1"):
                     is_choix_mode_ok = False
                     nom_joueur_solo = input("Choose a username : ")
                     joueur_solo = Joueur(nom_joueur_solo)
+                    input("")
+                    os.system("cls")
+                    is_choix_mode_ok = True
                 elif(choix_mode == "2"):
                     is_choix_mode_ok = False
                     nom_joueur_1 = input("Player1 : Choose a username : ")
