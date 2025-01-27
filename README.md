@@ -1,4 +1,4 @@
-# Pokemon® types chart game
+# Pokemon® types chart battle
 
 <p align="center">
   <img src="images/logo.png" alt="Pokemon types chart game" >
